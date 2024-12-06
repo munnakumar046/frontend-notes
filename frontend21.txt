@@ -1,0 +1,532 @@
+JavaScript objects
+===================
+A javascript object is an entity which is having state and behaviours.
+
+In general, javascript object is a collection of properties and functions.
+
+Javascript is a object based language because everything is present in objects.
+
+Javascript is a template based but not class based.We don't need to create a class to get the object.We can create object directly.
+
+There are three ways to create javascript objects.
+
+1)By using Object literal
+
+2)By creating instance of an Object i.e using new keyword.
+
+3)By using Object constructor i.e using new keyword.
+
+
+1) By using Object literal
+---------------------------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				emp={
+						"empId":101,
+						"empName":"Alan",
+						"empSal":1000
+				}
+
+				document.writeln("Employee Id :"+emp.empId+"<br>");
+				document.writeln("Employee Name :"+emp.empName+"<br>");
+				document.writeln("Employee Salary :"+emp.empSal+"<br>");
+		</script>
+</body>
+</html>
+
+
+2) By creating instance of an Object
+------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				var emp=new Object();
+				
+				emp.empId=201;
+				emp.empName="Jose";
+				emp.empSal=2000;
+
+				document.writeln("Employee Id :"+emp.empId+"<br>");
+				document.writeln("Employee Name :"+emp.empName+"<br>");
+				document.writeln("Employee Salary :"+emp.empSal+"<br>");
+		</script>
+</body>
+</html>
+
+3) By using Object constructor
+----------------------------
+In this we need to create a function with parameter and each parameter we need to assign in a current object by using this keyword.
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				function emp(empId,empName,empSal)
+				{
+					this.empId=empId;
+					this.empName=empName;
+					this.empSal=empSal;	
+				}
+
+				var e=new emp(301,"Lisa",3000);
+
+				document.writeln("Employee Id :"+e.empId+"<br>");
+				document.writeln("Employee Name :"+e.empName+"<br>");
+				document.writeln("Employee Salary :"+e.empSal+"<br>");
+		</script>
+</body>
+</html>
+
+
+JavaScript Arrays
+=================
+JavaScript Array is an object which is used to hold similar elements.
+
+Array index always starts with '0' because it is logical process.
+
+There are three ways to create javascript arrays.
+
+1) By using Array literal 
+
+2) By creating instance of an Array i.e using new operator 
+
+3) By using Array constructor i.e using new operator 
+
+
+1) By using Array literal 
+--------------------------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				var arr=[10,20,30];
+
+				for(var i=0;i<arr.length;i++)
+				{
+					document.writeln(arr[i]);
+				}
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				var arr=[10,20,30,40];
+
+				for(var i in arr)
+				{
+					document.writeln(arr[i]);
+				}
+		</script>
+</body>
+</html>
+
+
+2) By creating instance of an Array
+-----------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				var arr=new Array();
+				arr[0]=10;
+				arr[1]=20;
+				arr[3]=30;
+
+				for(var i in arr)
+				{
+					document.writeln(arr[i]);
+				}
+		</script>
+</body>
+</html>
+
+
+3) By using Array constructor
+-----------------------------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				var arr=new Array(10,20,30,40,50);
+
+				for(var i in arr)
+				{
+					document.writeln(arr[i]);
+				}
+		</script>
+</body>
+</html>
+
+
+Interview Question
+===================
+
+Q) Write a javascript program to insert and delete array elements?
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				var arr=[];
+				arr.push(10);
+				arr.push(20);
+				arr.push(30);
+
+				arr.pop();
+
+				for(var i in arr)
+				{
+					document.writeln(arr[i]);//10 20
+				}
+		</script>
+</body>
+</html>
+
+Q) Write a javascript program to perform sum of array elements?
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				var arr=[10,20,30];
+
+				var sum=0;
+
+				for(var i in arr)
+				{
+					sum+=arr[i];
+				}
+
+				document.writeln(sum);
+		</script>
+</body>
+</html>
+
+JavaScript String
+=================
+JavaScript String is an object which holds collection of characters.
+
+There are two ways to create JavaScript String.
+
+1) By using String literal 
+
+2) By creating instance of a String i.e using new operator.
+
+
+1) By using String literal 
+--------------------------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				var str="ihubtalent";
+				document.writeln(str);
+		</script>
+</body>
+</html>
+
+
+2) By creating instance of a String
+-----------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				var str=new String("qualitythought");
+				document.writeln(str);
+		</script>
+</body>
+</html>
+
+
+ex:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				var arr=[10,20,30];
+				document.writeln(arr.length+"<br>");
+
+				var str="ihubtalent";
+				document.writeln(str.length+"<br>");
+		</script>
+</body>
+</html>
+
+
+ex:
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				var str='qualitythought';
+				document.writeln(str.toUpperCase());
+		</script>
+</body>
+</html>
+
+
+ex:
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				var str='hello';
+				
+				for(var i=str.length-1;i>=0;i--)
+				{
+					document.writeln(str.charAt(i));
+				}
+		</script>
+</body>
+</html>
+
+
+BOM (Browser Object Model)
+==========================
+Browser Object Model is used to interact with browser.
+
+A default object for every browser is window object. It means we can call all the properties directly or by using window. 
+
+ex:
+	alert("This is alert box");
+
+	or 
+
+	window.alert("This is alert box");
+
+
+window object
+====================
+A window object is created automically by the browser.
+
+A "window" is a object of browser but not javascript.
+
+Javascript objects are String,Array,Date and etc.
+
+A "window" object is used to write programming related to browser.
+
+With the help of window object we can perform following activities very easily.
+
+1)It display dialog boxes and pop boxes.
+
+2)We can find width and height of a browser.
+
+3)We can move or resize the browser.
+
+4)Scroll to the browser.
+
+5)Get URL,hostname,protocol and etc of a browser.
+
+6)We can get javascript history.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

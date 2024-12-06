@@ -1,0 +1,521 @@
+JavaScript Functions
+====================
+JavaScript function is a block of code which is used to perform particular task.
+
+JavaScript function we can declare by using function keyword followed by name and followed by parentheses i.e '()'.
+
+JavaScript function contains letters, digits, underscore and dollar symbol. Having same rules as variables.
+
+JavaScript parentheses contains arguments and each argument must separated with comma.
+
+syntax
+------
+	function  <function_name>(arg1,arg2,.....,argN)
+	{
+		-
+		- //block of code 
+		-
+	}
+
+JavaScript function will execute in following ways.
+
+1) When we call or invoke a function
+
+2) When event is occur 
+
+3) Self Invocation  
+
+
+1) When we call or invoke a function
+-------------------------------------
+
+ex:
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			  	
+			  	function f1()
+			  	{
+			  		document.writeln("Function Example");
+			  	}
+
+			  	//calling
+			  	f1();
+
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			  	
+			  	function f1()
+			  	{
+			  		document.bgColor="#FF00FF";
+			  	}
+
+			  	//calling
+			  	f1();
+
+		</script>
+</body>
+</html>
+
+2) When event is occur 
+-----------------------
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<button onclick="f1()"> ClickMe </button>
+
+		<script>
+			function f1()
+			{
+				document.writeln("Function Example");
+			}
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<button onclick="f1()"> ClickMe </button>
+
+		<script>
+			function f1()
+			{
+				document.bgColor="#FFFF00";
+			}
+		</script>
+</body>
+</html>
+
+In javascript, one function can call to another function.
+
+ex:
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			function f1()
+			{
+				document.writeln("F1-Function");
+			}
+			function f2()
+			{
+				f1();
+				document.writeln("F2-Function");
+			}
+			f2();
+		</script>
+</body>
+</html>
+
+In javascript, every function name is a case sensitive.
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			function f1()
+			{
+				document.writeln("F1-Function");
+			}
+
+			//F1(); // Error F1 is not defined 
+			f1();
+		</script>
+</body>
+</html>
+
+No return type with no argument method
+---------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			function display()
+			{
+				document.writeln("Function1");
+			}
+
+			display();
+		</script>
+</body>
+</html>
+
+No return type with argument method
+---------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			function display(a,b)
+			{
+				document.writeln(a+b);
+			}
+
+			display(10,20);
+		</script>
+</body>
+</html>
+
+
+With return type with no argument method
+---------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			function display()
+			{
+				return "Hello World";
+			}
+
+			document.writeln(display());
+		</script>
+</body>
+</html>
+
+With return type with argument method
+---------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			function display(a,b)
+			{
+				return a+b;
+			}
+
+			document.writeln(display(10,20));
+		</script>
+</body>
+</html>
+
+Types of functions in javascript
+=================================
+We have three functions in javscript.
+
+1) Named function 
+
+2) Anonymous function 
+
+3) Arrow function 
+
+1) Named function 
+-------------------
+This type of function contains name at the time of declaration.
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				function f1()
+				{
+					document.writeln("Named Function");
+				}
+
+				f1();
+		</script>
+</body>
+</html>
+
+2) Anonymous function 
+------------------------
+Anonymous function does not have any name at the time of declaration.
+
+Anonymous function used dynamically at runtime.
+
+ex:
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				var f1=function(){
+						document.writeln("Anonymous Function");
+					}
+
+				f1();
+		</script>
+</body>
+</html>
+
+3) Arrow function
+------------------
+According ES6 standards we need to use arrow function.
+
+Arrow function is more secure then named function and anonymous function.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				var f1=()=>
+				{
+					document.writeln("Arrow function");
+				}
+
+				f1();
+		</script>
+</body>
+</html>
+
+JavaScript closures 
+=====================
+JavaScript closure is functions bundled together along with lexical scope.
+
+In JavaScript, closures are created every time when function is created.
+
+In Javascript closure , inner function can access the data of outer function.
+
+ex:
+--
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				//lexical scope 
+				var i=10;
+
+				function f1()
+				{
+					var j=20;
+
+					function f2()
+					{
+						var k=30;
+
+						document.writeln(i+" "+j+" "+k);
+					}	
+
+					//calling
+					f2();
+				}
+
+				//calling
+				f1();
+		</script>
+</body>
+</html>
+
+
+JavaScript Recursion
+=====================
+A function which call itself for many number of times is called recursion.
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				function f1(i)
+				{
+					if(i<=10)
+					{
+						document.writeln(i); // 1 2 3 4 5 6 7 8 9 10
+
+						f1(i+1);
+					}	
+				}
+				f1(1);
+		</script>
+</body>
+</html>
+
+Q) What is JavaScript hoisting? 
+
+Hoisting is a default behavior of JavaScript where all the variable and function declarations are moved on top. 
+
+ex:						ex:	
+
+<script>						<script>
+	i=1;							var i;
+	document.writeln(i);	===>				i = 1;
+	var i;							document.writeln(i);
+</script>						</script>
+
+
+ex:						ex:
+
+<script>						<script>			
+	f1();							function f1()
+	function f1()						{
+	{							document.writeln("F1-Function");
+		document.writeln("F1-Function"); ==>		}
+	}							f1();
+</script>						</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
